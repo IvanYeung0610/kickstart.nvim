@@ -248,6 +248,14 @@ require('lazy').setup({
   --
   -- See `:help gitsigns` to understand what the configuration keys do
 
+  -- add Comment.nvim
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+  },
+
   { -- add nvim-neo-tree
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
