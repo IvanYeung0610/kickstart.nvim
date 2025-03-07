@@ -118,6 +118,10 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
+-- Sets tabstop and shiftwidth
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- Enable break indent
 vim.opt.breakindent = true
 
