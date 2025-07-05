@@ -171,15 +171,6 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
--- autocomplete and start editing in container characters (e.g. {, (, ", etc...)
-local opts = { noremap = true, silent = true }
-
-vim.keymap.set('i', '"', '""<Left>', opts)
-vim.keymap.set('i', "'", "''<Left>", opts)
-vim.keymap.set('i', '(', '()<Left>', opts)
-vim.keymap.set('i', '[', '[]<Left>', opts)
-vim.keymap.set('i', '{', '{}<Left>', opts)
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -296,6 +287,14 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+  },
+
+  { -- nvim-autopairs plugin
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
   },
 
   { -- Neo-tree plugin
