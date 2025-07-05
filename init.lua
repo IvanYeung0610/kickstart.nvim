@@ -171,6 +171,15 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
+-- autocomplete and start editing in container characters (e.g. {, (, ", etc...)
+local opts = { noremap = true, silent = true }
+
+vim.keymap.set('i', '"', '""<Left>', opts)
+vim.keymap.set('i', "'", "''<Left>", opts)
+vim.keymap.set('i', '(', '()<Left>', opts)
+vim.keymap.set('i', '[', '[]<Left>', opts)
+vim.keymap.set('i', '{', '{}<Left>', opts)
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
