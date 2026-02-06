@@ -314,6 +314,13 @@ require('lazy').setup({
     },
   },
 
+  { -- Neogen Auto comments plugin
+    'danymat/neogen',
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    version = '*',
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -706,7 +713,7 @@ require('lazy').setup({
         pyright = {},
         cssls = {},
         emmet_language_server = {},
-        solargraph = {},
+        -- solargraph = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
